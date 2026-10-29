@@ -1,0 +1,14 @@
+{
+  "operating_system": "Linux-7.0.0-38-generic-x86_64-with-glibc2.39",
+  "python_version": "3.12.3",
+  "logical_cpu_count": 32,
+  "ollama_version": "ollama version is 0.40.12",
+  "installed_models": "NAME               ID              SIZE      MODIFIED      \nllama3.2:latest    a80c4f17acd5    2.0 GB    6 minutes ago",
+  "running_models": "NAME               ID              SIZE      PROCESSOR    CONTEXT    RUNNER      UNTIL              \nllama3.2:latest    a80c4f17acd5    2.6 GB    100% CPU     4096       llamacpp    3 minutes from now",
+  "memory": "total        used        free      shared  buff/cache   available\nMem:            30Gi        17Gi       2.0Gi       201Mi        11Gi        12Gi\nSwap:          325Gi        11Gi       314Gi",
+  "disk_usage": {
+    "total": 1274736582656,
+    "used": 1093466193920,
+    "free": 116439875584
+  }
+}

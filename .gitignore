@@ -25,5 +25,8 @@ venv_detection/
 models/
 data/
 datasets/
+
+# Benchmark outputs
 benchmarks/results/*
 !benchmarks/results/.gitkeep
+!benchmarks/results/environment_report.json
