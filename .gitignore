@@ -1,0 +1,29 @@
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+.pytest_cache/
+.coverage
+htmlcov/
+
+# Virtual environments
+venv/
+venv_detection/
+.venv/
+
+# Environment variables and secrets
+.env
+
+# IDE
+.vscode/
+.idea/
+
+# OS
+.DS_Store
+
+# Generated data and model artifacts
+models/
+data/
+datasets/
+benchmarks/results/*
+!benchmarks/results/.gitkeep
