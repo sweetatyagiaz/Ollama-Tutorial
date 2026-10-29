@@ -56,7 +56,7 @@ Type `exit` or `quit` to stop.
 
 Run `python -m pytest tests/unit -v`.
 
-Verified during Sprint 2 development: **13 tests passed**. Coverage includes API availability, model installation, chat inference, system prompts, error handling, health checks, and CLI behavior.
+Verified during Sprint 2 development: **15 tests passed**. Coverage includes API availability, model installation, chat inference, system prompts, error handling, health checks, and CLI behavior.
 
 ## Model Quality Observation
 
@@ -64,7 +64,7 @@ During live testing, `llama3.2` explained Python functions correctly but failed 
 
 ## Limitations
 
-- Conversation history is not retained between CLI turns.
+- Conversation history is retained between turns within a single CLI session.
 - HTTP requests are synchronous.
 - The client returns plain-text assistant content.
 - Unit tests mock HTTP interactions; live inference is tested separately.

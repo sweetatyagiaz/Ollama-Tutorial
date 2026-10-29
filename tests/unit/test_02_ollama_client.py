@@ -23,6 +23,32 @@ def client(mock_session):
     )
 
 
+
+
+def test_chat_includes_conversation_history(client, mock_session):
+    response = Mock()
+    response.json.return_value = {
+        "message": {"role": "assistant", "content": "Your name is Alex."}
+    }
+    mock_session.post.return_value = response
+
+    result = client.chat(
+        "What is my name?",
+        history=[
+            {"role": "user", "content": "My name is Alex."},
+            {"role": "assistant", "content": "Nice to meet you, Alex."},
+        ],
+    )
+
+    assert result == "Your name is Alex."
+    payload = mock_session.post.call_args.kwargs["json"]
+    assert payload["messages"] == [
+        {"role": "user", "content": "My name is Alex."},
+        {"role": "assistant", "content": "Nice to meet you, Alex."},
+        {"role": "user", "content": "What is my name?"},
+    ]
+
+
 def test_chat_returns_assistant_content(client, mock_session):
     response = Mock()
     response.json.return_value = {

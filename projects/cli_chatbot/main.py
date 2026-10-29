@@ -14,8 +14,15 @@ def main() -> None:
     print("=" * 55)
     print("Ollama CLI Chatbot")
     print(f"Model: {client.model}")
-    print("Type 'exit' or 'quit' to stop.")
+    print("Conversation history is enabled for this session.")
+    print("Type exit or quit to stop.")
     print("=" * 55)
+
+    history: list[dict[str, str]] = []
+    system_prompt = (
+        "You are a helpful AI assistant. "
+        "Answer directly and acknowledge uncertainty when needed."
+    )
 
     while True:
         try:
@@ -34,11 +41,11 @@ def main() -> None:
         try:
             response = client.chat(
                 message,
-                system=(
-                    "You are a helpful AI assistant. "
-                    "Answer directly and acknowledge uncertainty when needed."
-                ),
+                system=system_prompt,
+                history=history.copy(),
             )
+            history.append({"role": "user", "content": message})
+            history.append({"role": "assistant", "content": response})
             print(f"\nAssistant: {response}")
         except RuntimeError as exc:
             print(f"\nError: {exc}")

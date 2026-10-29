@@ -11,7 +11,7 @@ load_dotenv()
 
 
 class OllamaClient:
-    """A small, configurable client for Ollama chat inference."""
+    """A configurable client for Ollama chat inference."""
 
     def __init__(
         self,
@@ -36,8 +36,9 @@ class OllamaClient:
         message: str,
         system: str | None = None,
         temperature: float = 0.7,
+        history: list[dict[str, str]] | None = None,
     ) -> str:
-        """Send a message to Ollama and return the assistant's response."""
+        """Send a message with optional prior conversation messages."""
         if not message or not message.strip():
             raise ValueError("message must not be empty")
 
@@ -45,6 +46,20 @@ class OllamaClient:
 
         if system:
             messages.append({"role": "system", "content": system})
+
+        if history:
+            for item in history:
+                if (
+                    not isinstance(item, dict)
+                    or item.get("role") not in {"user", "assistant"}
+                    or not isinstance(item.get("content"), str)
+                ):
+                    raise ValueError(
+                        "history entries must contain a user/assistant role and string content"
+                    )
+                messages.append(
+                    {"role": item["role"], "content": item["content"]}
+                )
 
         messages.append({"role": "user", "content": message})
 
