@@ -1,0 +1,7 @@
+{
+  "category": "coding",
+  "prompts": [
+    "Write a Python function that checks whether a string is a palindrome. Include a simple example.",
+    "Write a Python function to find duplicate elements in a list. Include time complexity."
+  ]
+}

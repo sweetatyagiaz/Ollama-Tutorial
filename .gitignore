@@ -30,3 +30,4 @@ datasets/
 benchmarks/results/*
 !benchmarks/results/.gitkeep
 !benchmarks/results/environment_report.json
+!benchmarks/results/model_benchmarks.json

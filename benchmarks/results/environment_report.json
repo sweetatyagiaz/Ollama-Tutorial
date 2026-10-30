@@ -10,5 +10,26 @@
     "total": 1274736582656,
     "used": 1093466193920,
     "free": 116439875584
-  }
+  },
+  "cpu_model": "AMD Ryzen 9 7950X3D 16-Core Processor",
+  "physical_cpu_cores": 16,
+  "ram_total": "30 GiB",
+  "ram_available": "12 GiB",
+  "gpu_available": false,
+  "gpu_type": null,
+  "ollama_model_details": {
+    "name": "llama3.2:latest",
+    "architecture": "llama",
+    "parameters": "3.2B",
+    "model_size": "2.0 GB",
+    "quantization": "Q4_K_M",
+    "embedding_length": 3072,
+    "advertised_context_length": 131072,
+    "observed_runtime_context": 4096,
+    "capabilities": [
+      "completion",
+      "tools"
+    ]
+  },
+  "benchmark_execution_backend": "CPU"
 }

@@ -1,0 +1,28 @@
+{
+  "base_url": "http://localhost:11434",
+  "models": [
+    "llama3.2:latest"
+  ],
+  "repetitions": 3,
+  "temperature": 0.0,
+  "timeout": 180,
+  "prompts": [
+    {
+      "category": "general_knowledge",
+      "prompt": "Explain the difference between machine learning and deep learning in approximately 150 words."
+    },
+    {
+      "category": "reasoning",
+      "prompt": "A company has 120 employees. 40 percent are engineers. Half of the engineers work remotely. How many engineers work remotely? Explain the calculation."
+    },
+    {
+      "category": "coding",
+      "prompt": "Write a Python function that checks whether a string is a palindrome. Include a simple example."
+    },
+    {
+      "category": "summarization",
+      "prompt": "Summarize this statement in two sentences: Retrieval-Augmented Generation combines information retrieval with language generation. It retrieves relevant external documents and supplies them as context to a language model, helping produce grounded and current answers."
+    }
+  ],
+  "output_file": "benchmarks/results/model_benchmarks.json"
+}

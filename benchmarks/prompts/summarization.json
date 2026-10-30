@@ -1,0 +1,7 @@
+{
+  "category": "summarization",
+  "prompts": [
+    "Summarize this statement in two sentences: Retrieval-Augmented Generation combines information retrieval with language generation. It retrieves relevant external documents and supplies them as context to a language model, helping produce grounded and current answers.",
+    "Summarize in two sentences: Machine learning algorithms learn patterns from data. Supervised learning uses labelled examples, while unsupervised learning discovers patterns in unlabelled data."
+  ]
+}

@@ -1,0 +1,7 @@
+{
+  "category": "reasoning",
+  "prompts": [
+    "A company has 120 employees. 40 percent are engineers. Half of the engineers work remotely. How many engineers work remotely? Explain the calculation.",
+    "If all A are B, and all B are C, what can we conclude about A and C? Explain."
+  ]
+}

@@ -1,0 +1,7 @@
+{
+  "category": "general_knowledge",
+  "prompts": [
+    "Explain the difference between machine learning and deep learning in approximately 150 words.",
+    "What is an LLM? Explain its architecture and practical applications."
+  ]
+}
